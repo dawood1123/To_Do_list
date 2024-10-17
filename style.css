@@ -49,3 +49,46 @@ html, body{
 #add:hover{ 
     background-color:rgb(46, 117, 141) ;
 }
+
+.Remove-btn{ 
+    margin-left: 10px;
+    color: white;
+    background-color: rgb(219, 72, 72);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.completed{ 
+    text-decoration: line-through;
+    color: gray;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    /* Limit the height of the task list */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    margin-bottom: 10px;
+}
+
+li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #e9e9e9;
+}
