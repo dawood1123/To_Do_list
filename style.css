@@ -1,0 +1,51 @@
+html, body{ 
+    margin: 0; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+}
+
+#container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(63, 143, 170);
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+#text-input{ 
+    width: 80%;
+    height: 26px;
+    padding: 3px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+#text-input:focus{ 
+    border: 2px solid rgb(63, 143, 170);;
+}
+
+#add{ 
+    color: white; 
+    background-color:rgb(63, 143, 170);
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    width: 100px ;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#add:hover{ 
+    background-color:rgb(46, 117, 141) ;
+}

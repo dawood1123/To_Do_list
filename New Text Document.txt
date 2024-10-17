@@ -1,0 +1,56 @@
+// Create the pet object
+const pet = {
+    name: "Fluffy",
+    type: "dog",
+    age: 3,
+    happiness: 50,
+    hunger: 30,
+
+    // Method to feed the pet
+    feed: function() {
+        this.hunger = Math.max(this.hunger - 20, 0);
+        alert(`${this.name} has been fed! Hunger level is now ${this.hunger}.`);
+    },
+
+    // Method to play with the pet
+    play: function() {
+        this.happiness = Math.min(this.happiness + 20, 100);
+        alert(`${this.name} had fun playing! Happiness level is now ${this.happiness}.`);
+    },
+
+    // Method to age the pet
+    agePet: function() {
+        this.age += 1;
+        this.happiness = Math.max(this.happiness - 5, 0);
+        this.hunger = Math.min(this.hunger + 10, 100);
+        alert(`${this.name} is now ${this.age} years old. Happiness is ${this.happiness} and hunger is ${this.hunger}.`);
+    }
+};
+
+// Function to interact with the pet
+function interactWithPet() {
+    let action;
+    do {
+        action = prompt("What would you like to do with your pet? (feed, play, age, exit)").toLowerCase();
+
+        switch(action) {
+            case "feed":
+                pet.feed();
+                break;
+            case "play":
+                pet.play();
+                break;
+            case "age":
+                pet.agePet();
+                break;
+            case "exit":
+                alert("Goodbye! Take care of your pet!");
+                break;
+            default:
+                alert("Invalid action. Please choose feed, play, age, or exit.");
+        }
+    } while (action !== "exit");
+}
+
+// Start the interaction
+interactWithPet();
